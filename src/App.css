@@ -1,38 +1,290 @@
-.App {
-  text-align: center;
+.navbar-wrapper {
+  position: relative;
+  top: auto;             
+  left: auto;
+  transform: none;
+  width: 75vw;           
+  height: 4.5vw;          
+  z-index: 1000;
+  margin: 3vw auto;  
+}
+.nav-item{
+  font-size: 1.3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar background */
+.bg-gradient {
+  background: linear-gradient(
+    to right,
+    #363635,
+    #494948,
+    #616260,
+    #494948,
+    #363635
+  );
+  height: 100%;          
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-left,
+.nav-right {
+  width: 40%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around; 
+}
+
+/* Center logo circle */
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.logo-img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.main-page {
+  margin-top: -11%; 
+}
+
+/* Separator.css */
+.separator {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 6px;
+  padding: 5.5vw 0;
+  background-color: #EDEDEC;
 }
 
-.App-link {
-  color: #61dafb;
+.separator2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 5.5vw 0;
 }
 
-@keyframes App-logo-spin {
+.line {
+  flex: 0 0 30vw;
+  height: 2px;
+  width: 5vw;
+  background-color: #555;
+}
+
+.line2 {
+  flex: 0 0 21vw;
+  height: 2px;
+  width: 5vw;
+  background-color: #555;
+}
+
+
+/* ImageSlider.css */
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #EDEDEC;
+}
+
+.slider {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 1vw 0;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left linear infinite;
+}
+
+.slider-left .slider-track {
+  animation-name: scroll-left;
+}
+
+.slider-right .slider-track {
+  animation-name: scroll-right;
+}
+
+.slide {
+  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+.slide img {
+  height: 20vw;
+  border-radius: 10px;
+  margin: 0 10px;
+  object-fit: cover;
+}
+
+/* Animations */
+@keyframes scroll-left {
   from {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.WhyChoosepara{
+      font-size: '1.5rem';
+      line-height: '1.6';
+      margin: 0;
+      margin-right: 'auto';
+      max-width: '70%';
+      font-family:'Montserrat, sans-serif';
+      font-weight: 200;
+      padding: 0 2vw;
+}
+.whatwedopara{
+  font-size: '1.5rem';
+      line-height: '1.6';
+      margin: 0;
+      margin-right: 'auto';
+      max-width: '70%';
+      font-family:'Montserrat, sans-serif';
+      font-weight: 200;
+      padding: 0 2vw;
+}
+
+@media (max-width: 768px) {
+/* Center logo circle */
+.logo-circle {
+  background: white;
+  border-radius: 50%;
+  top: 50%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.custom-hamburger {
+  display: inline-block;
+  width: 25px;      /* button width stays fixed, you can adjust */
+  height: 24px;     /* smaller height */
+  position: relative;
+  cursor: pointer;
+  margin-left: 80%;
+  margin-top: 60%;
+}
+
+.custom-hamburger span {
+  display: block;
+  height: 8%;       /* line thickness as % of container height */
+  width: 80%;         /* full width of container */
+  background-color: white;  /* line color */
+  margin-bottom: 13%;    /* spacing between lines as % of container height */
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-hamburger span:last-child {
+  margin-bottom: 0;
+}
+
+.slide img {
+  height: 40vw;
+  border-radius: 10px;
+  margin: 0 10px;
+  object-fit: cover;
+}
+
+
+
+}
+
+/* Newsletter container inside footer */
+.footer-newsletter {
+  position: relative; /* relative to parent */
+  width: 100%;
+  max-width: 360px; /* optional */
+}
+
+.footer-newsletter .subscription {
+  display: flex;
+  width: 100%;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+}
+
+.footer-newsletter .subscription .add-email {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 60px 0 0 60px;
+  background-color: #000; /* match footer */
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.footer-newsletter .subscription .submit-email {
+  padding: 0 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 60px 60px 0;
+  background: #4ABEBB;
+  color: #fff;
+  font-size: 1rem;
+  transition: width .35s ease-in-out, background .35s ease-in-out;
+}
+
+.footer-newsletter .subscription.done .submit-email {
+  background: #C0E02E;
+}
+
+.order-1:focus,
+.order-1 img:focus {
+  outline: none !important;
+}
+
+.image-container {
+  width: 50%;
+  height: 100%;
+}
+
+.image-container .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.myheadingabout{
+  font-size: 2vw;
+}
+/* Mobile view */
+@media (max-width: 768px) {
+  .image-container {
+    width: 95% !important;
+  }
+  .myheadingabout{
+    font-size: 2rem;
   }
 }

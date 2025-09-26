@@ -1,0 +1,154 @@
+/* Container for the contact section */
+.contact-container {
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+/* Left Section (Project Info) */
+.left-section {
+  padding: 40px;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+/* Headings and Description */
+.project-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #212529;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 7rem;
+  width: 70%;
+}
+
+/* Idea Box */
+.idea-box {
+  padding: 5px 25px 5px 0px;
+  font-size: 1.5rem;
+  display: inline-block;
+  font-weight: 500;
+  color: #495057;
+  text-align: center;
+}
+
+/* Email Button */
+.email-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.email-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+/* Icon inside Email Button */
+.email-icon {
+  background-color: white;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form Section */
+.form-section {
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+/* Form Heading */
+.form-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #212529;
+}
+
+/* Form Inputs */
+.form-control {
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #000000;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #333333;
+}
+
+/* Textarea */
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 991.98px) {
+  .left-section {
+    text-align: center;
+  }
+
+  .project-description {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .email-button {
+    margin: 0 auto;
+  }
+
+  .idea-box {
+    margin: 0 auto 30px;
+  }
+}
+
+.project-form-wrapper {
+  width: 95%;
+  height: 75vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 100%;
+  height: 100%;
+}
